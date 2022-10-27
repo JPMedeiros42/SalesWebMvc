@@ -15,6 +15,11 @@ namespace SalesWebMvc.Services
         {
             _context = context;
         }
+        public void Insert(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
 
         public List<Seller> FindaAll()
         {
